@@ -147,7 +147,7 @@
       <div class="wrap">
         <p class="section-index">03 — Current order</p>
         <h2 id="orders-title">Take Choepessa</h2>
-        <p>Posted 29 Sep in #community-announcements. Take Choepessa with the 737th, the 5th, and the 912th. No patch notes are on the site. None of the announcement channels had any.</p>
+        <p id="orders-body">Posted 29 Sep in #community-announcements. Take Choepessa with the 737th, the 5th, and the 912th. No patch notes are on the site. None of the announcement channels had any.</p>
       </div>
     </section>
 
@@ -214,5 +214,19 @@
       <p class="footer-meta">Helldivers is a trademark of its owners, used here only to name the game this community plays.</p>
     </div>
   </footer>
+
+  <script>
+    fetch("current-order.txt")
+      .then(function (response) { return response.ok ? response.text() : Promise.reject(); })
+      .then(function (text) {
+        var parts = text.replace(/^\uFEFF/, "").trim().split(/\n\s*\n/);
+        var title = (parts.shift() || "").trim();
+        var body = parts.join("\n\n").trim();
+        if (title) document.getElementById("orders-title").textContent = title;
+        var slot = document.getElementById("orders-body");
+        if (slot && body) slot.textContent = body;
+      })
+      .catch(function () {});
+  </script>
 </body>
 </html>
