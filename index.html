@@ -148,6 +148,7 @@
         <p class="section-index">03 — Current order</p>
         <h2 id="orders-title">Take Choepessa</h2>
         <p id="orders-body">Posted 29 Sep in #community-announcements. Take Choepessa with the 737th, the 5th, and the 912th. No patch notes are on the site. None of the announcement channels had any.</p>
+        <p class="orders-actions"><button type="button" class="btn btn-ghost" id="orders-edit">Update order</button></p>
       </div>
     </section>
 
@@ -216,17 +217,54 @@
   </footer>
 
   <script>
-    fetch("current-order.txt")
-      .then(function (response) { return response.ok ? response.text() : Promise.reject(); })
-      .then(function (text) {
-        var parts = text.replace(/^\uFEFF/, "").trim().split(/\n\s*\n/);
-        var title = (parts.shift() || "").trim();
-        var body = parts.join("\n\n").trim();
-        if (title) document.getElementById("orders-title").textContent = title;
-        var slot = document.getElementById("orders-body");
-        if (slot && body) slot.textContent = body;
-      })
-      .catch(function () {});
+    (function () {
+      var titleEl = document.getElementById("orders-title");
+      var bodyEl = document.getElementById("orders-body");
+      var button = document.getElementById("orders-edit");
+      var key = "101st-current-order";
+      var saved = null;
+      try { saved = JSON.parse(localStorage.getItem(key) || "null"); } catch (e) {}
+      if (saved && saved.title && saved.body) {
+        titleEl.textContent = saved.title;
+        bodyEl.textContent = saved.body;
+      }
+      var editing = false;
+      var input;
+      var area;
+      button.addEventListener("click", function () {
+        if (!editing) {
+          input = document.createElement("input");
+          input.type = "text";
+          input.value = titleEl.textContent.trim();
+          input.setAttribute("aria-label", "Order title");
+          area = document.createElement("textarea");
+          area.value = bodyEl.textContent.trim();
+          area.setAttribute("aria-label", "Order text");
+          var box = document.createElement("div");
+          box.className = "orders-editor";
+          box.id = "orders-editor";
+          titleEl.hidden = true;
+          bodyEl.hidden = true;
+          titleEl.after(box);
+          box.append(input, area);
+          button.textContent = "Save order";
+          editing = true;
+          input.focus();
+          return;
+        }
+        var title = input.value.trim();
+        var body = area.value.trim();
+        if (!title || !body) return;
+        titleEl.textContent = title;
+        bodyEl.textContent = body;
+        titleEl.hidden = false;
+        bodyEl.hidden = false;
+        document.getElementById("orders-editor").remove();
+        try { localStorage.setItem(key, JSON.stringify({ title: title, body: body })); } catch (e) {}
+        button.textContent = "Update order";
+        editing = false;
+      });
+    })();
   </script>
 </body>
 </html>
