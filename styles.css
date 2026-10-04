@@ -465,6 +465,16 @@ h3 {
 
 
 
+#orders-title {
+  max-width: 24ch;
+}
+
+#orders-body {
+  white-space: pre-line;
+  max-width: var(--measure);
+  margin: 0;
+}
+
 .orders-actions {
   margin: 1rem 0 0;
 }
