@@ -501,6 +501,92 @@ h3 {
   resize: vertical;
 }
 
+.divisions {
+  padding: 3.5rem 0 1rem;
+}
+
+.divisions-copy {
+  max-width: var(--measure);
+  margin-bottom: 1.5rem;
+}
+
+.division-list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.division-list li {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  margin: 0.65rem 0;
+  color: var(--muted);
+}
+
+.division-list strong {
+  color: var(--ink);
+}
+
+.div-dot {
+  flex: 0 0 auto;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-top: 0.45rem;
+  border-radius: 50%;
+}
+
+.div-dot-red { background: #FF0000; }
+.div-dot-scorpion { background: #C7D154; }
+.div-dot-kraken { background: #A65CE6; }
+
+.structure-chart {
+  margin: 0 auto 0.75rem;
+  width: min(720px, 100%);
+  background: var(--bg-raise);
+  border: 1px solid var(--line);
+  padding: 0.75rem;
+}
+
+.structure-chart img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.structure-chart figcaption {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.structure-download {
+  margin: 0 0 0.5rem;
+  color: var(--dim);
+  font-size: 0.9rem;
+}
+
+.structure-download a {
+  color: var(--yellow);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.structure-download a:hover,
+.structure-download a:focus {
+  border-bottom-color: var(--yellow);
+}
+
+/* Longer propaganda captions for the Short thumb stay readable */
+.collage figure:has(img[src*="super-earth-salute"]) figcaption {
+  text-transform: none;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  font-size: 0.8rem;
+}
+
 .propaganda {
   padding: 4rem 0 1rem;
 }
