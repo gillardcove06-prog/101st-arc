@@ -173,12 +173,13 @@
     <section class="orders" id="orders" aria-labelledby="orders-title">
       <div class="wrap">
         <p class="section-index">03 — Current order</p>
-        <h2 id="orders-title">Operation Iron Olympia</h2>
-        <p id="orders-body">In progress. Launched Sep 29, 2026. Goal order.
+        <h2 id="orders-title">Operation: No Quarter</h2>
+        <p id="orders-body">101st EOW operation (Execution Of War). In progress. All divisions.
 
-Linked servers: 14th Stormdiver Division, 15th Helldiver Corps, 193rd Illempiri Support Company, 25th Helldiver Rifle Division, 3/7 Control Unit, 737th Kriegskorps, 777th Relief Republic, Calibanite Jaegers.
+Target: 50,000 kills combined across all fronts.
 
-High Command of several clans have come together to liberate the planet of Choepessa. Should the operation be successful, the standard SEAF army will move into the planets of K and Fury to liberate it for us, possibly saving millions of helldiver lives that could be better spend elsewhere. The 101st will spearhead the mission but requires the support of as many helldiver clans as possible.
+Commander Maximus has ordered the 3rd Kraken Division, the 2nd Scorpion Division, and the 1st Terminator Division to take the fight to every front and bring back scalps. The objective is 50,000 kills, combined across the Illuminate, Terminid, and Automaton fronts.
+Give no quarter.
 -101st Hicom</p>
         <p class="orders-actions"><button type="button" class="btn btn-ghost" id="orders-edit">Update order</button></p>
       </div>
@@ -275,7 +276,7 @@ High Command of several clans have come together to liberate the planet of Choep
       var titleEl = document.getElementById("orders-title");
       var bodyEl = document.getElementById("orders-body");
       var button = document.getElementById("orders-edit");
-      var key = "101st-current-order-v2";
+      var key = "101st-current-order-v3";
       var saved = null;
       try { saved = JSON.parse(localStorage.getItem(key) || "null"); } catch (e) {}
       if (saved && saved.title && saved.body) {
