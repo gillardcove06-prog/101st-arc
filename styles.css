@@ -545,6 +545,62 @@ h3 {
   text-transform: uppercase;
 }
 
+.short-block {
+  margin-top: 2rem;
+  padding: 1.4rem 1.2rem 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--bg-raise);
+}
+
+.short-title {
+  margin: 0 0 0.35rem;
+  font-family: var(--stencil);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.short-credit {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.short-embed {
+  width: min(315px, 100%);
+  margin: 0 auto;
+  aspect-ratio: 9 / 16;
+  background: #000;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.short-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.short-link {
+  margin: 0.9rem 0 0;
+  text-align: center;
+}
+
+.short-link a {
+  color: var(--yellow);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.short-link a:hover,
+.short-link a:focus {
+  border-bottom-color: var(--yellow);
+}
+
 .discord {
   padding: 2.5rem 0 4rem;
 }
