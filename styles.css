@@ -1,4 +1,4 @@
-/* 101st ARC — original fan community page. System fonts if Google Fonts is offline. */
+/* 101st Commando Battalion — original fan community page. System fonts if Google Fonts is offline. */
 
 :root {
   --bg: #121410;
@@ -814,3 +814,44 @@ a:focus-visible,
     display: none;
   }
 }
+
+/* === 101st Commando Battalion rebrand: palette sampled from the logo === */
+:root {
+  --olive: #4b5a1c;
+  --olive-dark: #495a3e;
+  --khaki: #b2b988;
+  --ring-red: #780000;
+  --beret-red: #7d0000;
+  --bg: #000000;
+  --bg-raise: #0d0f07;
+  --bg-panel: #161a0b;
+  --ink: #e9ecd6;
+  --muted: #b2b988;
+  --yellow: #a01010;
+  --yellow-deep: #780000;
+  --line: rgba(120, 0, 0, 0.7);
+}
+body {
+  background:
+    linear-gradient(rgba(0,0,0,0.86), rgba(0,0,0,0.92)),
+    url("camo.jpg") center / 512px repeat,
+    #000;
+}
+body::before {
+  background-image:
+    linear-gradient(rgba(75, 90, 28, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 90, 28, 0.08) 1px, transparent 1px);
+}
+.site-header { background: rgba(0, 0, 0, 0.94); border-bottom: 2px solid var(--ring-red); }
+.brand-mark { border-radius: 50%; box-shadow: 0 0 0 2px var(--ring-red); }
+h1, h2, h3 { color: var(--ink); }
+h2 { border-left: 4px solid var(--olive); padding-left: 0.6rem; }
+.section-index, .kicker { color: var(--khaki); }
+.tagline { font-family: var(--stencil); color: var(--khaki); font-size: 1.15rem; letter-spacing: 0.05em; margin: 0.25rem 0 0.75rem; }
+.patch-img { border-radius: 50%; box-shadow: 0 0 0 4px var(--ring-red), 0 0 60px rgba(75, 90, 28, 0.55); }
+.btn-waiting, .btn:not(.btn-ghost) { background: var(--ring-red); border-color: var(--ring-red); color: #fff; }
+.btn-ghost { border-color: var(--olive); color: var(--khaki); }
+.hazard { background: repeating-linear-gradient(135deg, var(--olive) 0 18px, #000 18px 36px) !important; }
+.plt-patch { width: 2.2rem; height: 2.2rem; object-fit: contain; vertical-align: middle; margin-left: 0.4rem; }
+.join-panel, .discord-box, .principles li { background: rgba(22, 26, 11, 0.85); border-color: var(--olive); }
+.site-footer { border-top: 2px solid var(--ring-red); background: #000; }
