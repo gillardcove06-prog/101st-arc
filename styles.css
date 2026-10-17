@@ -858,3 +858,8 @@ h2 { border-left: 4px solid var(--olive); padding-left: 0.6rem; }
 .div-patch { width: 3.4rem; height: 3.4rem; object-fit: contain; flex: none; }
 .div-logo { width: 7rem; height: 7rem; border-radius: 50%; box-shadow: 0 0 0 3px var(--ring-red); display: block; margin: 0.5rem 0; }
 .plt-badge { white-space: nowrap; display: inline-block; margin: 0.15rem 0.25rem 0.15rem 0; padding: 0.1rem 0.55rem; border: 1px solid var(--ring-red); background: var(--olive); color: var(--ink); font-family: var(--stencil); font-size: 0.8rem; letter-spacing: 0.08em; border-radius: 3px; }
+.plt-row { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 0.4rem; }
+.plt-fig { margin: 0; text-align: center; width: 8rem; }
+.plt-fig img { margin: 0 auto; }
+.plt-fig img { width: 6.5rem; height: 6.5rem; object-fit: contain; display: block; }
+.plt-fig figcaption { font-family: var(--stencil); font-size: 0.75rem; letter-spacing: 0.08em; color: var(--khaki); margin-top: 0.2rem; }
