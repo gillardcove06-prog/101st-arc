@@ -539,7 +539,6 @@ h3 {
 .div-dot-red { background: #FF0000; }
 .div-dot-scorpion { background: #C7D154; }
 .div-dot-kraken { background: #A65CE6; }
-.div-dot-cavalry { background: #60A040; }
 
 .structure-chart {
   margin: 0 auto 0.75rem;
@@ -855,3 +854,7 @@ h2 { border-left: 4px solid var(--olive); padding-left: 0.6rem; }
 .plt-patch { width: 2.2rem; height: 2.2rem; object-fit: contain; vertical-align: middle; margin-left: 0.4rem; }
 .join-panel, .discord-box, .principles li { background: rgba(22, 26, 11, 0.85); border-color: var(--olive); }
 .site-footer { border-top: 2px solid var(--ring-red); background: #000; }
+.division-list li { align-items: center; }
+.div-patch { width: 3.4rem; height: 3.4rem; object-fit: contain; flex: none; }
+.div-logo { width: 7rem; height: 7rem; border-radius: 50%; box-shadow: 0 0 0 3px var(--ring-red); display: block; margin: 0.5rem 0; }
+.plt-badge { white-space: nowrap; display: inline-block; margin: 0.15rem 0.25rem 0.15rem 0; padding: 0.1rem 0.55rem; border: 1px solid var(--ring-red); background: var(--olive); color: var(--ink); font-family: var(--stencil); font-size: 0.8rem; letter-spacing: 0.08em; border-radius: 3px; }
